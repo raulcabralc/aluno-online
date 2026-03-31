@@ -27,7 +27,7 @@ public class AlunoController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Optional<Aluno> findById(@PathVariable Long id) {
-        return findById(id);
+        return alunoService.findById(id);
     }
 
     @PostMapping("/create")
