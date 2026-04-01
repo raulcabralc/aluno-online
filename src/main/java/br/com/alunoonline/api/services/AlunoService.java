@@ -27,6 +27,8 @@ AlunoService {
         alunoRepository.save(aluno);
     }
 
+    public Aluno update(Long id, Aluno aluno) { return alunoRepository.save(aluno); }
+
     public void delete(Long id) {
         alunoRepository.deleteById(id);
     }
