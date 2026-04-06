@@ -36,7 +36,7 @@ public class AlunoController {
 
     @PutMapping("/update/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Aluno update(Aluno aluno, @PathVariable Long id) { return alunoService.update(id, aluno); }
+    public Optional<Aluno> update(@RequestBody Aluno aluno, @PathVariable Long id) { return alunoService.update(id, aluno); }
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.OK)

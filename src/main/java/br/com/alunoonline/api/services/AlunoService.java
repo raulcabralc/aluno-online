@@ -27,7 +27,20 @@ AlunoService {
         alunoRepository.save(aluno);
     }
 
-    public Aluno update(Long id, Aluno aluno) { return alunoRepository.save(aluno); }
+    public Optional<Aluno> update(Long id, Aluno aluno) {
+        return alunoRepository.findById(id).map(alunoExistente -> {
+            if (aluno.getName() != null) {
+                alunoExistente.setName(aluno.getName());
+            }
+
+            if (aluno.getEmail() != null) {
+                alunoExistente.setEmail(aluno.getEmail());
+            }
+
+            return alunoRepository.save(alunoExistente);
+
+        });
+    }
 
     public void delete(Long id) {
         alunoRepository.deleteById(id);

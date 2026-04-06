@@ -26,7 +26,20 @@ public class ProfessorService {
         professorRepository.save(professor);
     }
 
-    public Professor update(Long id, Professor professor) { return professorRepository.save(professor); }
+    public Optional<Professor> update(Long id, Professor professor) {
+        return professorRepository.findById(id).map(professorExistente -> {
+            if (professor.getName() != null) {
+                professorExistente.setName(professor.getName());
+            }
+
+            if (professor.getEmail() != null) {
+                professorExistente.setEmail(professor.getEmail());
+            }
+
+            return professorRepository.save(professorExistente);
+
+        });
+    }
 
     public void delete(Long id) {
         professorRepository.deleteById(id);

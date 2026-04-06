@@ -36,7 +36,7 @@ public class ProfessorController {
 
     @PutMapping("/update/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Professor update(Professor professor, @PathVariable Long id) { return professorService.update(id, professor); }
+    public Optional<Professor> update(@RequestBody Professor professor, @PathVariable Long id) { return professorService.update(id, professor); }
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.OK)
