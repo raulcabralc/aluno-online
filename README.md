@@ -17,10 +17,15 @@ O projeto consiste em um **CRUD** (Create, Read, Update, Delete) completo para a
 * **Banco de Dados:** PostgreSQL / MySQL (Configurável via application.properties)
 * **Gerenciador de Dependências:** Maven
 
-## 📂 Estrutura do Projeto
+### 📂 Estrutura de Pastas e Responsabilidades
 
-* `src/main/java`: Contém as camadas da aplicação (Controller, Service, Repository, Entity).
-* `src/main/resources`: Arquivos de configuração e propriedades da aplicação.
+(MVC) O projeto está organizado em camadas para separar a lógica de negócio do acesso aos dados:
+
+* **`controllers/`**
+* **`services/`**
+* **`models/`**
+* **`repositories/`**
+* **`AlunoOnlineApplication.java`**
 
 ## ⚙️ Como Executar
 
