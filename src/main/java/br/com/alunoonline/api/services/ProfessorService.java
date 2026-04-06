@@ -2,17 +2,15 @@ package br.com.alunoonline.api.services;
 
 import br.com.alunoonline.api.models.Professor;
 import br.com.alunoonline.api.repositories.ProfessorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
 public class ProfessorService {
-    private final ProfessorRepository professorRepository;
-
-    public ProfessorService(ProfessorRepository professorRepository) {
-        this.professorRepository = professorRepository;
-    }
+    @Autowired
+    private ProfessorRepository professorRepository;
 
     public Iterable<Professor> index() {
         return professorRepository.findAll();

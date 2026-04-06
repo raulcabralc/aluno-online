@@ -2,6 +2,7 @@ package br.com.alunoonline.api.services;
 
 import br.com.alunoonline.api.models.Aluno;
 import br.com.alunoonline.api.repositories.AlunoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -9,11 +10,8 @@ import java.util.Optional;
 @Service
 public class
 AlunoService {
-    private final AlunoRepository alunoRepository;
-
-    public AlunoService(AlunoRepository alunoRepository) {
-        this.alunoRepository = alunoRepository;
-    }
+    @Autowired
+    private AlunoRepository alunoRepository;
 
     public Iterable<Aluno> index() {
         return alunoRepository.findAll();
