@@ -26,7 +26,7 @@ O projeto consiste em um **CRUD** (Create, Read, Update, Delete) completo para a
 
 1. Clone o repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/aluno-online.git](https://github.com/seu-usuario/aluno-online.git)]
+   git clone [https://github.com/raulcabralc/aluno-online.git](https://github.com/seu-usuario/aluno-online.git)]
     ```
 2. Certifique-se de configurar as credenciais do banco de dados no arquivo `src/main/resources/application.properties`.
 3. Execute a aplicação via Maven:
