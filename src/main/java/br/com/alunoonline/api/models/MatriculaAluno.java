@@ -4,21 +4,30 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "disciplinas")
-public class Disciplina implements Serializable {
+public class MatriculaAluno implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private Double nota1;
+
+    private Double nota2;
 
     @ManyToOne
-    @JoinColumn(name = "professor_id")
-    private Professor professor;
+    @JoinColumn(name = "aluno_id")
+    private Aluno aluno;
+
+    @ManyToOne
+    @JoinColumn(name = "disciplina_id")
+    private Disciplina disciplina;
+
+    private String status;
 }
