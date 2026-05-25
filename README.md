@@ -71,4 +71,6 @@ Os Controllers gerenciam os protocolos HTTP e a comunicação com o cliente (Pos
    <img src="https://github.com/raulcabralc/aluno-online/blob/master/assets/dbeaver%201.png" width=500 />
    <img src="https://github.com/raulcabralc/aluno-online/blob/master/assets/postman%202.png" width=500 />
    <img src="https://github.com/raulcabralc/aluno-online/blob/master/assets/postman%201.png" width=500 />
+   <img src="https://github.com/raulcabralc/aluno-online/blob/master/assets/postman%203.png" width=500 />
+   <img src="https://github.com/raulcabralc/aluno-online/blob/master/assets/postman%204.png" width=500 />
 </div>
