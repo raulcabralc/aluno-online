@@ -11,6 +11,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Data
 @Entity
+@Table(name = "matriculas")
 public class MatriculaAluno implements Serializable {
 
     @Id

@@ -16,7 +16,7 @@ public class MatriculaAlunoController {
     @Autowired
     MatriculaAlunoService service;
 
-    @PostMapping
+    @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<MatriculaAluno> create(@RequestBody MatriculaAluno matriculaAluno) {
         MatriculaAluno matriculaAlunoCreated = service.create(matriculaAluno);
